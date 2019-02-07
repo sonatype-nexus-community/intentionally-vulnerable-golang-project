@@ -7,4 +7,6 @@ before_script:
   - export PATH=$PATH:$PWD/tools/
 
 script: 
+  - pwd
+  - ls
   - nancy Gopkg.lock

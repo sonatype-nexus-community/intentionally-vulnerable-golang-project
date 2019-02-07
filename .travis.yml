@@ -1,6 +1,7 @@
 language: minimal
 
 before_script:
+  - cd /tmp && mkdir tools
   - sudo curl -s -L "https://github.com/sonatype-nexus-community/nancy/releases/download/0.0.5/nancy-linux.amd64-0.0.5" -o "/tmp/tools/nancy"
   - sudo chmod +x /tmp/tools/nancy
   - export PATH=$PATH:$PWD/tools/

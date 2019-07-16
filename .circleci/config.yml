@@ -12,7 +12,6 @@ jobs:
             apt-get update && apt install -y curl
             curl -s -L "https://github.com/sonatype-nexus-community/nancy/releases/download/v0.0.17/nancy-linux.amd64-v0.0.17" -o "/tmp/tools/nancy"
             chmod +x /tmp/tools/nancy
-            export PATH=$PATH:/tmp/tools/
       - run:
           name: Run Nancy
-          command: nancy Gopkg.lock
+          command: /tmp/tools/nancy Gopkg.lock

@@ -29,7 +29,7 @@ require (
 	github.com/mitchellh/hashstructure v1.0.0 // indirect
 	github.com/nranchev/go-libGeoIP v0.0.0-20170629073846-d6d4a9a4c7e8 // indirect
 	github.com/oschwald/maxminddb-golang v1.3.1 // indirect
-	github.com/rs/cors v1.6.0 // indirect
+	github.com/rs/cors v1.4.0
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/spf13/cobra v0.0.5 // indirect
 	github.com/syndtr/goleveldb v1.0.0 // indirect
@@ -39,4 +39,5 @@ require (
 	go.uber.org/zap v1.10.0 // indirect
 	golang.org/x/crypto v0.0.0-20190618222545-ea8f1a30c443 // indirect
 	gopkg.in/karalabe/cookiejar.v2 v2.0.0-20150724131613-8dcd6a7f4951 // indirect
+	github.com/gohouse/gorose v1.0.5
 )

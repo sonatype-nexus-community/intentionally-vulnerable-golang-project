@@ -11,6 +11,8 @@ require (
 	github.com/garyburd/redigo v1.6.0 // indirect
 	github.com/gofrs/uuid v3.2.0+incompatible // indirect
 	github.com/goharbor/harbor v1.7.2
+	github.com/gohouse/converter v0.0.3 // indirect
+	github.com/gohouse/gorose v1.0.5
 	github.com/gophish/gophish v0.1.2
 	github.com/gorhill/cronexpr v0.0.0-20180427100037-88b0669f7d75 // indirect
 	github.com/gorilla/handlers v1.4.0 // indirect
@@ -39,5 +41,4 @@ require (
 	go.uber.org/zap v1.10.0 // indirect
 	golang.org/x/crypto v0.0.0-20190618222545-ea8f1a30c443 // indirect
 	gopkg.in/karalabe/cookiejar.v2 v2.0.0-20150724131613-8dcd6a7f4951 // indirect
-	github.com/gohouse/gorose v1.0.5
 )

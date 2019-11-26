@@ -1,4 +1,6 @@
-language: minimal
+language: go
+go:
+  - 1.13.x
 
 before_script:
   - cd /tmp && mkdir tools && cd -
@@ -6,5 +8,13 @@ before_script:
   - sudo chmod +x /tmp/tools/nancy
   - export PATH=$PATH:/tmp/tools/
 
-script: 
-  - nancy Gopkg.lock
+jobs:
+  include:
+    - stage: "Examples"
+      script: nancy Gopkg.lock
+      name: "Using dep"
+    - script: go list -m all | nancy
+      name: "Using gomod"
+
+env:
+  - GO111MODULE=on

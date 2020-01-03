@@ -14,4 +14,4 @@ jobs:
             chmod +x /tmp/tools/nancy
       - run:
           name: Run Nancy
-          command: /tmp/tools/nancy ~/project/Gopkg.lock
+          command: /tmp/tools/nancy ~/project/go.sum

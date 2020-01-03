@@ -15,4 +15,6 @@ jobs:
             cd ~/project
       - run:
           name: Run Nancy
-          command: ./tmp/tools/nancy Gopkg.lock
+          command: |
+            ls -la
+            /tmp/tools/nancy Gopkg.lock

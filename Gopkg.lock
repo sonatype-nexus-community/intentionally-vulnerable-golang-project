@@ -2,27 +2,26 @@
 
 
 [[projects]]
-  branch = "v0.0.0"
-  digest = "1:db55103471575a6a390d1a862c9658075d3bb04a436e97d229e9e2f94c23e1f9"
-  name = "golang.org/x/crypto"
-  packages = [
-    "chacha20",
-    "internal/subtle",
-  ]
+  digest = "1:0a6601bdbdc44a799b6b59d7ea57de756fd1f46a37aaaaa07c3a1e7b3e2b7799"
+  name = "github.com/gophish/gophish"
+  packages = ["config"]
   pruneopts = "UT"
-  revision = "c2843e01d9a2"
+  revision = "d04c562d7e9637db1ef5d258017553438de87504"
+  version = "v0.1.2"
 
 [[projects]]
-  branch = "v0.0.0"
-  digest = "1:0110babbeb34e338aca6f831fcd8c4eb32a5e5844ca1b8d25a95a56308028e53"
-  name = "golang.org/x/sys"
-  packages = ["cpu"]
+  digest = "1:100a36e16f77aaad7c9144ab26bcefb92c5b6ebed5b137f935fdc11f541fa5b8"
+  name = "golang.org/x/crypto"
+  packages = ["md4"]
   pruneopts = "UT"
-  revision = "c3d80250170dec19bf61949c81233cede5ddaf61"
+  revision = "c2843e01d9a2bc60bb26ad24e09734fdc2d9ec58"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["golang.org/x/crypto/chacha20"]
+  input-imports = [
+    "github.com/gophish/gophish/config",
+    "golang.org/x/crypto/md4",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

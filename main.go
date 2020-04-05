@@ -1,15 +1,42 @@
 package main
 
 import (
-	"encoding/base64"
 	"fmt"
+	"io"
+	"io/ioutil"
 
-	"golang.org/x/crypto/chacha20"
+	"golang.org/x/crypto/md4"
+	"github.com/gophish/gophish/config"
 )
 
+var validConfig = []byte(`{
+	"admin_server": {
+		"listen_url": "127.0.0.1:3333",
+		"use_tls": true,
+		"cert_path": "gophish_admin.crt",
+		"key_path": "gophish_admin.key"
+	},
+	"phish_server": {
+		"listen_url": "0.0.0.0:8080",
+		"use_tls": false,
+		"cert_path": "example.crt",
+		"key_path": "example.key"
+	},
+	"db_name": "sqlite3",
+	"db_path": "gophish.db",
+	"migrations_prefix": "db/db_",
+	"contact_address": ""
+}`)
+
 func main(){
-	cha20, err := chacha20.HChaCha20([]byte("chachachachachachachachachacha12"), []byte("slideslideslide1"))
-	fmt.Println(fmt.Sprintf("Doing the cha cha slide : %v but might have errored : %v", base64.StdEncoding.EncodeToString(cha20), err))
+	h := md4.New()
+	data := "These pretzels are making me thirsty."
+	io.WriteString(h, data)
+	fmt.Printf("MD4 is the new MD5: %x\n", h.Sum(nil))
+
+	err := ioutil.WriteFile("config.json", validConfig, 0644)
+	conf := config.Config{}
+	fmt.Printf("GONE PHISH'N for configs %v, maybe error: %v\n", conf, err)
 
 	fmt.Println("HI I'M INTENTIONALLY USING VULNERABLE LIBS")
 }

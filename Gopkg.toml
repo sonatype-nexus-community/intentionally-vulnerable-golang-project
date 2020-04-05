@@ -28,3 +28,11 @@
 [prune]
   go-tests = true
   unused-packages = true
+
+[[constraint]]
+  name = "github.com/gophish/gophish"
+  version = "0.1.1"
+
+[[constraint]]
+  name = "golang.org/x/crypto"
+  revision = "c2843e01d9a2bc60bb26ad24e09734fdc2d9ec58"

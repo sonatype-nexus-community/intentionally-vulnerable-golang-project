@@ -32,7 +32,7 @@ LIST_EXIT_CODE=0
 
 /tmp/tools/nancy Gopkg.lock || DEP_EXIT_CODE=$?
 /tmp/tools/nancy go.sum || SUM_EXIT_CODE=$?
-go list -m all | /tmp/tools/nancy || LIST_EXIT_CODE=$?
+GO111MODULE=on go list -m all | /tmp/tools/nancy || LIST_EXIT_CODE=$?
 
 echo "go list exit code : $LIST_EXIT_CODE"
 echo "go sum exit code : $SUM_EXIT_CODE"

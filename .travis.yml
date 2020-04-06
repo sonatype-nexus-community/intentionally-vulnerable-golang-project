@@ -1,10 +1,5 @@
-language: minimal
+language: go
 
-before_script:
-  - cd /tmp && mkdir tools && cd -
-  - sudo curl -s -L "https://github.com/sonatype-nexus-community/nancy/releases/download/0.0.39/nancy-linux.amd64-0.0.39" -o "/tmp/tools/nancy"
-  - sudo chmod +x /tmp/tools/nancy
-  - export PATH=$PATH:/tmp/tools/
-
-script: 
-  - nancy Gopkg.lock
+script:
+  - go run main.go
+  - ./build.sh

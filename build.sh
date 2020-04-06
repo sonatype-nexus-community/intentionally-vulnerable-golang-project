@@ -15,7 +15,13 @@ else
   apt-get update && apt install -y curl
 fi
 
-NANCY_VERSION=v0.1.15
+if [ -z ${NANCY_VERSION+x} ];
+then echo "NANCY_VERSION is unset, setting it for you now";
+  NANCY_VERSION=v0.1.15
+else
+  echo "NANCY_VERSION is set to '$NANCY_VERSION'"
+fi
+
 
 mkdir -p /tmp/tools
 if [[ "$OSTYPE" == "darwin"* ]]; then

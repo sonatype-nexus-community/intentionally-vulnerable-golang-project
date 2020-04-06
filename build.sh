@@ -41,9 +41,9 @@ echo "dep exit code : $DEP_EXIT_CODE"
 
 if [[ "$LIST_EXIT_CODE" -eq 0 || "$SUM_EXIT_CODE" -eq 0 || "$DEP_EXIT_CODE" -eq 0 ]]
 then
-  echo "One of the above nancy tests actually passed....that means the project is no longer vulenerable and thats an issue"
+  echo "One of the above nancy tests actually passed....that means the project is no longer vulnerable and thats an issue"
   exit 199
 else
-  echo "YAH!!! :) Still vulenerable....usually not something you are happy about"
+  echo "YAH!!! :) Still vulnerable....usually not something you are happy about"
   exit 0
 fi

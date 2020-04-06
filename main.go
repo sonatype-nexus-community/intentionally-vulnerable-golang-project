@@ -35,7 +35,7 @@ func main(){
 	io.WriteString(h, data)
 	fmt.Printf("MD4 is the new MD5: %x\n", h.Sum(nil))
 
-	err := ioutil.WriteFile("config.json", validConfig, 0644)
+	err := ioutil.WriteFile("config/phish-config.json", validConfig, 0644)
 	conf := config.Config{}
 	fmt.Printf("GONE PHISH'N for configs %v, maybe error: %v\n", conf, err)
 

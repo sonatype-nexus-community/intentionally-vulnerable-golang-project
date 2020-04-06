@@ -5,6 +5,7 @@ import (
 	"io"
 	"io/ioutil"
 
+	"github.com/go-gitea/gitea/modules/markup"
 	"golang.org/x/crypto/md4"
 	"github.com/gophish/gophish/config"
 )
@@ -37,6 +38,8 @@ func main(){
 	err := ioutil.WriteFile("config.json", validConfig, 0644)
 	conf := config.Config{}
 	fmt.Printf("GONE PHISH'N for configs %v, maybe error: %v\n", conf, err)
+
+	fmt.Printf("IS A README?? : %v as per gitea\n", markup.IsReadmeFile("README.md"))
 
 	fmt.Println("HI I'M INTENTIONALLY USING VULNERABLE LIBS")
 }

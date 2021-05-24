@@ -10,6 +10,8 @@ import (
 	"github.com/gophish/gophish/config"
 )
 
+// grr
+
 var validConfig = []byte(`{
 	"admin_server": {
 		"listen_url": "127.0.0.1:3333",

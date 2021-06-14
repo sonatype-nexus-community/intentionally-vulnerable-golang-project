@@ -1,4 +1,4 @@
-name: Go Nancy
+name: sonatype-nexus-community/nancy
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  sonatype-nexus-community/nancy:
     runs-on: ubuntu-latest
     steps:
     - name: Check out code into the Go module directory

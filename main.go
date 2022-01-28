@@ -42,4 +42,7 @@ func main(){
 	fmt.Printf("IS A README?? : %v as per gitea\n", markup.IsReadmeFile("README.md"))
 
 	fmt.Println("HI I'M INTENTIONALLY USING VULNERABLE LIBS")
+
+  fmt.Println("MUCH PR MUCH WOW I GO LANG")
 }
+
